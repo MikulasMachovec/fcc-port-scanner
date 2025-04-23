@@ -26,7 +26,7 @@ def get_open_ports(target, port_range, verbose=False):
             result = sock.connect_ex((ip, port))
             if result == 0:
                 open_ports.append(port)
-            sock.close()
+                sock.close()
         except socket.error:
             continue
 
